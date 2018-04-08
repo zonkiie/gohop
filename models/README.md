@@ -1,3 +1,3 @@
 # Models
-Data Models (Classes) goes hoere
+Data Models (Classes) goes here
 
