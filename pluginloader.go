@@ -1,13 +1,5 @@
 package main
 
-/**
- * Help for Plugin System of go
- * ----------------------------
- * @see https://medium.com/learning-the-go-programming-language/writing-modular-go-programs-with-plugins-ec46381ee1a9
- * @see https://code.tutsplus.com/tutorials/writing-plugins-in-go--cms-29101
- * @see https://stackoverflow.com/questions/42388090/go-1-8-plugin-use-custom-interface?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
- */
-
 import (
 	"plugin"
 	"os"

@@ -14,13 +14,13 @@ import (
 
 var (
 	db, preloadDB	*gorm.DB
-	dbDriver = flag.String("DbDriver", "", "Database Driver")
-	dbDSN = flag.String("DSN", "", "Database Data Source Name")
+	dbDriver = flag.String("DbDriver", "sqlite3", "Database Driver")
+	dbDSN = flag.String("DSN", ":memory:", "Database Data Source Name")
 	
 )
 
 func InitDB() *gorm.DB {
-	db, err := gorm.Open("sqlite3", ":memory:")
+	db, err := gorm.Open(*dbDriver, *dbDSN)
 	if err != nil {
 		panic("failed to connect database")
 	}

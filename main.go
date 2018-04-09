@@ -37,6 +37,6 @@ func prog_start() {
 }	
 
 func main() {
-	//prog_start()
+	prog_start()
 }
 
