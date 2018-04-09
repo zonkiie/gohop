@@ -2,8 +2,7 @@
 
 # The Build script
 
-echo "clean"
-go clean
+sh cleanup.sh
 echo "get"
 go get
 echo "build"

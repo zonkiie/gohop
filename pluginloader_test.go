@@ -10,7 +10,7 @@ func TestLoadPlugin(t *testing.T) {
 	startfuncname := "startfunc"
 	var p *plugin.Plugin
 	var e error
-	p, e = LoadPlugin(example_plugin)
+	p, e = LoadPluginDirect(example_plugin)
 	if e != nil {
 		t.Errorf("Failed to load plugin %s\n", example_plugin)
 	}

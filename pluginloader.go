@@ -39,3 +39,22 @@ func LoadPlugin(filename string, entry_func ...string) (p *plugin.Plugin, err er
 		return nil,  errors.New("File not found")
 	}
 }
+
+/**
+ * https://medium.com/learning-the-go-programming-language/writing-modular-go-programs-with-plugins-ec46381ee1a9
+ */
+func LoadPluginDirect(filename string) (p *plugin.Plugin, err error) {
+	var s_err, p_err error
+	if _, s_err = os.Stat(filename); !os.IsNotExist(s_err) {
+		p, p_err = plugin.Open(filename)
+		if p_err != nil {
+			//panic(p_err)
+			err = p_err
+			return nil, err
+		}
+		return
+		
+	} else {
+		return nil,  errors.New("File not found")
+	}
+}
