@@ -12,7 +12,7 @@ var (
 /**
  * Loads a Plugin and executes a start function
  */
-func loadPlugin(filename string, entry_func ...string) (p *plugin.Plugin, err error) {
+func LoadPlugin(filename string, entry_func ...string) (p *plugin.Plugin, err error) {
 	var s_err, p_err, l_err error
 	var startfunc plugin.Symbol
 	if _, s_err = os.Stat(filename); !os.IsNotExist(s_err) {
