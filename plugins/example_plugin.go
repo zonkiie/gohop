@@ -3,4 +3,4 @@ package main
 
 import "fmt"
 
-func startfunc() { fmt.Printf("Hello, This is a test.\n") }
+func Startfunc() { fmt.Printf("Hello, This is a test.\n") }

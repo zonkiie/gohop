@@ -37,14 +37,6 @@ func prog_start() {
 }	
 
 func main() {
-	p, err := LoadPluginDirect("plugins/example_plugin.so")
-	startfuncname := "startfunc"
-	startfunc, err := p.Lookup(startfuncname)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to find function %s. Error is: %s\n", startfuncname, err.Error())
-	}
-	startfunc.(func())()
-	
 	//prog_start()
 }
 

@@ -22,7 +22,7 @@ func LoadPlugin(filename string, entry_func ...string) (p *plugin.Plugin, err er
 			err = p_err
 			return nil, err
 		}
-		startfuncname := "startfunc"
+		startfuncname := "Startfunc"
 		if len(entry_func) > 0 {
 			startfuncname = entry_func[0]
 		}
