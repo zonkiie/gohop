@@ -9,7 +9,8 @@ This should become the Go Hosting Panel. The objective of this software is an op
  - [Macaron](https://go-macaron.com/)
  - [Raymond](https://github.com/aymerick/raymond)
  - [GORM](http://gorm.io/)
- - [iniflags](github.com/vharitonsky/iniflags)
+ - [iniflags](https://github.com/vharitonsky/iniflags)
+ - [creasty-defaults](https://github.com/creasty/defaults)
  - SQL Drivers
 
 ## Other Projects
