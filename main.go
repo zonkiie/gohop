@@ -38,7 +38,7 @@ func prog_start() {
 }	
 
 func LoadStartPlugin() {
-	p, p_err := LoadPluginDirect("plugins/example_plugin.so")
+	p, p_err := gohop_libs.LoadPluginDirect("plugins/example_plugin.so")
 	if p_err != nil {
 		panic(fmt.Sprintf("Failed to load plugin. Error is: %s\n", p_err.Error()))
 	}
