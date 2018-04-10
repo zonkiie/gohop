@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"flag"
 //	"plugin"
+//	"lib"
 )
 
 var (
@@ -36,7 +37,27 @@ func prog_start() {
 	
 }	
 
+func LoadStartPlugin() {
+	p, p_err := LoadPluginDirect("plugins/example_plugin.so")
+	if p_err != nil {
+		panic(fmt.Sprintf("Failed to load plugin. Error is: %s\n", p_err.Error()))
+	}
+	fmt.Printf("Plugin: %T %v\n", p, p)
+	startfuncname := "Startfunc"
+	startfuncsymbol, err := p.Lookup(startfuncname)
+	if err != nil {
+		panic(fmt.Sprintf("Failed to find function %s. Error is: %s\n", startfuncname, err.Error()))
+	}
+	startfunc, ok := startfuncsymbol.(func())
+	if !ok {
+		panic("Could not map startfunc\n")
+	}
+	fmt.Print("Executing startfunc\n")
+	startfunc()
+}
+
 func main() {
+	LoadStartPlugin()
 	prog_start()
 }
 

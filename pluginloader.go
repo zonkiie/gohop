@@ -1,4 +1,4 @@
-package lib
+package main
 
 import (
 	"plugin"
@@ -55,3 +55,4 @@ func LoadPluginDirect(filename string) (p *plugin.Plugin, err error) {
 		return nil,  errors.New("File not found")
 	}
 }
+
