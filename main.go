@@ -2,12 +2,12 @@ package main
 
 import (
 	"github.com/vharitonsky/iniflags"
+	"github.com/zonkiie/gohop_libs"
 	"os"
 	"os/user"
 	"fmt"
 	"flag"
 //	"plugin"
-//	"lib"
 )
 
 var (
