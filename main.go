@@ -14,7 +14,7 @@ import (
 var (
 	cWs = flag.Bool("Webservice", false, "Start Web Service")
 	debugOutput = flag.Bool("DebugOutput", false, "Print debug values")
-	pluginDir = flag.String("pluginDir", "plugins", "Plugin Directory")
+	pluginDir = flag.String("PluginDir", "plugins", "Plugin Directory")
 	defaultConfigFile string
 	err interface{}
 )
