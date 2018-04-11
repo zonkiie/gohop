@@ -8,8 +8,8 @@ import (
 	"github.com/satori/go.uuid"
 )
 
-type master_data struct {
-	ID				uuid
+type Master_data struct {
+	ID				uuid.UUID
 	FirstName		string
 	LastName		string
 	NameAddition	string
@@ -18,5 +18,5 @@ type master_data struct {
 	Postcode		string
 	City			string
 	Countrycode		string
-	Contact			contacttype[]
+	Contact			[]Contacttype
 }

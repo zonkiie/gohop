@@ -2,11 +2,12 @@ package main
 
 import (
 	"github.com/vharitonsky/iniflags"
-	"github.com/zonkiie/gohop_libs"
+	. "github.com/zonkiie/gohop_libs"
 	"os"
 	"os/user"
 	"fmt"
 	"flag"
+// 	"gohop/models"
 //	"plugin"
 )
 
@@ -38,7 +39,7 @@ func prog_start() {
 }	
 
 func LoadStartPlugin() {
-	p, p_err := gohop_libs.LoadPluginDirect("plugins/example_plugin.so")
+	p, p_err := LoadPlugin("plugins/example_plugin.so")
 	if p_err != nil {
 		panic(fmt.Sprintf("Failed to load plugin. Error is: %s\n", p_err.Error()))
 	}
@@ -58,6 +59,8 @@ func LoadStartPlugin() {
 
 func main() {
 	LoadStartPlugin()
+// 	var ct models.Contacttype
+// 	fmt.Printf("%v\n", ct)
 	prog_start()
 }
 
